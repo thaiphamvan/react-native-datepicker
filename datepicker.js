@@ -364,7 +364,7 @@ class DatePicker extends Component {
                 {this.getTitleElement()}
               </View>
             :
-              <View/>
+             this.props.children ? this.props.children : <View/>
           }
           {this._renderIcon()}
           {Platform.OS === 'ios' && <Modal
